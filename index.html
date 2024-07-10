@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transparent Lime Navbar with Background Image</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            /* Ensure the body takes up the full height of the viewport */
+        }
+
+        .background-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            /* Ensure the background image is behind other elements */
+            background: url('./img/background.png') no-repeat center center;
+            background-size: cover;
+            /* Scale the image to fit within the container */
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: flex-start;
+            /* Aligns items to the right */
+            padding: 10px 20px;
+            position: relative;
+            /* Ensure it appears above the background image */
+            z-index: 1;
+            /* Ensure the navbar is above the background image */
+            height: 4rem;
+        }
+
+        .navbar a {
+            color: black;
+            text-decoration: none;
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: larger;
+            color: #fc85ff;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        .links {
+            background-color: #f2fcfc;
+            width: 14rem;
+            height: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 3rem;
+            border-radius: 45%;
+        }
+
+        .title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .title-heading {
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 4rem;
+        }
+
+        .screenshot-heading {
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 2rem;
+        }
+
+        .game-description {
+            margin: 3rem;
+            padding: 2rem;
+            border-radius: 20px;
+            background-color: rgba(242, 252, 252, 0.7);
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 100;
+            line-height: 30px;
+        }
+
+        .heighlited-text {
+            color: red;
+        }
+
+        .download-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .download-button {
+            margin: 3rem;
+            display: inline-block;
+            padding: 15px 30px;
+            font-family: "Press Start 2P", system-ui;
+            font-size: 16px;
+            color: white;
+            background-color: #fc85ff;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: background-color 0.3s ease;
+        }
+
+        .download-button:hover {
+            background-color: #e070e0;
+        }
+
+        .mask-dude{
+            height: 6rem;
+        }
+
+
+        .screenshots {
+            display: flex;
+            flex-direction: column;
+            padding: 4rem;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .screenshot-images {
+            width: 45rem;
+            margin-bottom: 3rem;
+        }
+
+        /* Add this CSS code to your existing <style> tag or external stylesheet */
+        .footer {
+            background-color: rgba(242, 252, 252, 0.7);
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            font-family: "Press Start 2P", system-ui;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .footer p {
+            margin: 10px 0;
+            color: black;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .footer-links a {
+            color: #fc85ff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background-image"></div>
+    <section class="section-container">
+        <div class="navbar">
+            <div class="links">
+                <a href="https://github.com" target="_blank">GitHub</a>
+            </div>
+            <div class="links">
+                <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+        <div class="title">
+            <h1 class="title-heading">Pixel Adventure</h1>
+        </div>
+
+        <div class="game-description">
+            <p class="description">
+                Welcome to <span class="heighlited-text">"Pixel Adventure"</span> an exhilarating journey through a
+                vibrant, retro-inspired world where every pixel tells a story. Embark on an epic quest with our intrepid
+                hero, Mask Dude Marko, a courageous character reminiscent of <span class="heighlited-text">classic
+                    platformer</span> icons. With his signature mask and agile movements, Marko navigates through
+                challenging landscapes filled with perilous obstacles. Channeling the spirit of beloved games like
+                Mario, "Pixel Adventure" offers a blend of nostalgic gameplay and modern twists, inviting players to
+                execute precise jumps in a beautifully pixelated realm. Immerse yourself in this thrilling adventure
+                where every leap of faith could lead to glory or doom. Are you ready to guide Mask Dude Marko to
+                victory?
+
+                Also this is my first game made with Godot 4
+            </p>
+        </div>
+
+        <div class="download-container">
+            <img src="./img/icon.png" alt="" class="mask-dude">
+            <a href="https://github.com/8BitButter/Pixel-Adventure/releases/download/game/PixelAdv.zip" class="download-button" download>Download Now</a>
+            
+        </div>
+
+        <div class="title">
+            <h1 class="screenshot-heading">Screenshots</h1>
+        </div>
+
+        <div class="screenshots">
+            <img src="./img/Screenshot1.png" alt="" class="screenshot-images">
+            <img src="./img/Screenshot2.png" alt="" class="screenshot-images">
+            <img src="./img/Screenshot3.png" alt="" class="screenshot-images">
+        </div>
+
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="description">Made with <span class="heighlited-text"> &hearts;</span>  by Rajat</p>
+            <div class="footer-links">
+                <a href="https://github.com" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
